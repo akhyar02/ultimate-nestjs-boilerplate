@@ -521,9 +521,15 @@ APP_PORT=3001
 
 ### 3. Docker Issues
 ```bash
-# Reset everything
+# Reset project containers
 pnpm docker:dev:down
-docker system prune -a
+docker compose down --volumes --remove-orphans
+
+# If needed, prune unused Docker resources (WARNING: affects all projects)
+docker system prune  # Safe: removes stopped containers, unused networks
+# docker system prune -a  # DANGEROUS: removes ALL unused images
+
+# Restart
 pnpm docker:dev:up
 
 # View logs
@@ -584,7 +590,7 @@ const value = this.configService.get('app.port', { infer: true });
 - [NestJS Docs](https://docs.nestjs.com/)
 - [TypeORM Docs](https://typeorm.io/)
 - [Better Auth Docs](https://www.better-auth.com/)
-- [Frontend Example](https://github.com/niraj-khatiwada/ultimate-nestjs-client)
+- [Frontend Example](https://github.com/niraj-khatiwada/ultimate-nestjs-client) - React client with auto-generated API
 
 ---
 
