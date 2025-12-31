@@ -2,6 +2,10 @@
 
 Advanced Nest.js boilerplate for scalable startups.
 
+> 📚 **New to this template?** Start here:
+> - [**LEARNING_GUIDE.md**](./LEARNING_GUIDE.md) - Comprehensive guide to architecture, patterns, and best practices
+> - [**QUICK_REFERENCE.md**](./QUICK_REFERENCE.md) - Quick reference for common tasks and patterns
+
 ## Features📦
 
 - [x] Nest.js with Fastify
